@@ -14,6 +14,8 @@ public class MotionStateManager : MonoBehaviour
 
     [SerializeField] public TrackingTarget leftTrackingTarget;
     [SerializeField] public TrackingTarget rightTrackingTarget;
+    [SerializeField] private Transform leftHand;
+    [SerializeField] private Transform rightHand;
     
     [SerializeField] private float _matchVal;
     private float _mapScale = 3f;
@@ -25,9 +27,9 @@ public class MotionStateManager : MonoBehaviour
 
     private void UpdateMatchVal()
     {
-        //Perhaps inefficient - rn we pull these at each update in case the user has switched from hand tracking <> controllers
-        Transform leftHand = GameObject.FindWithTag("LeftHand").transform;
-        Transform rightHand = GameObject.FindWithTag("RightHand").transform;
+        //Perhaps inefficient - rn we pull these at each update in case the user has switched from hand tracking <> controllers or hands arent showing yet
+        leftHand = GameObject.FindWithTag("LeftHand").transform;
+        rightHand = GameObject.FindWithTag("RightHand").transform;
 
         var distLeft = Vector3.Distance(leftHand.position, leftTrackingTarget.transform.position);
         var distRight = Vector3.Distance(rightHand.position, rightTrackingTarget.transform.position);
@@ -42,14 +44,18 @@ public class MotionStateManager : MonoBehaviour
         statusLabel.text = "Match val" + _matchVal;
     }
     
-    float map(float s, float a1, float a2, float b1, float b2)
-    {
-        return b1 + (s-a1)*(b2-b1)/(a2-a1);
-    }
-
     private void Update()
     {
         UpdateMatchVal();
         //statusLabel.text = "Tracking left:"+_trackingLeft+"\nTracking right:"+_trackingRight+"\nTracking success: " + (_trackingLeft && _trackingRight)+"\nOverall match: "+_match;
     }
+
+    #region Utility
+
+    float map(float s, float a1, float a2, float b1, float b2)
+    {
+        return b1 + (s-a1)*(b2-b1)/(a2-a1);
+    }
+
+    #endregion
 }
