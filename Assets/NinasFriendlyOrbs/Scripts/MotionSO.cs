@@ -2,17 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MotionSO : MonoBehaviour
+public class MotionSO : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
+    public enum Name
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        MotionA,
+        MotionB
     }
 }
