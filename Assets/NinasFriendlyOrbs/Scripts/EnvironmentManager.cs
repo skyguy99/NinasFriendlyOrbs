@@ -24,6 +24,7 @@ public class EnvironmentManager : MonoBehaviour
     private void UpdateOrb(float f)
     {
         //orb.GetComponent<Renderer>().material.SetFloat("_EmissiveMult", Mathf.Pow(f,2f));
+        orb.GetComponentInChildren<Light>().intensity = MotionStateManager.ExtensionMethods.map(f, 0, 1, 2f, 5f);
     }
 
     private void OnDisable()
@@ -37,7 +38,7 @@ public class EnvironmentManager : MonoBehaviour
 
     private void UpdateParticleSystem(float f)
     {
-        var emitVal = MotionStateManager.ExtensionMethods.map(f, 0, 1, 0.1f, 9f);
+        var emitVal = MotionStateManager.ExtensionMethods.map(f, 0, 1, 0.1f, 11f);
         var speedVal = MotionStateManager.ExtensionMethods.map(f, 0, 1, 0.1f, 1f);
 
         foreach (ParticleSystem p in particleSystems)
