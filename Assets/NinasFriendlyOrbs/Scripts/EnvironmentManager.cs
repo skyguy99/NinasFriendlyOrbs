@@ -59,7 +59,7 @@ public class EnvironmentManager : MonoBehaviour
     
     private void UpdateParticleSystem(float f)
     {
-        var emitVal = MotionStateManager.ExtensionMethods.map(f, 0, 1, 0.1f, 11f);
+        var emitVal = MotionStateManager.ExtensionMethods.map(f, 0, 1, 2.5f, 20f);
         var speedVal = MotionStateManager.ExtensionMethods.map(f, 0, 1, 0.1f, 1f);
 
         foreach (ParticleSystem p in particleSystems)
