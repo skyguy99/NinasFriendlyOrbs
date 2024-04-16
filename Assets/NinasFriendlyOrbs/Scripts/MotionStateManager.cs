@@ -34,8 +34,8 @@ public class MotionStateManager : MonoBehaviour
         var distLeft = Vector3.Distance(leftHand.position, leftTrackingTarget.transform.position);
         var distRight = Vector3.Distance(rightHand.position, rightTrackingTarget.transform.position);
 
-        var matchLeftAdjusted = 1-Mathf.Clamp(map(distLeft, 0, _mapScale, 0, 1), 0, 1);
-        var matchRightAdjusted = 1-Mathf.Clamp(map(distRight, 0, _mapScale, 0, 1), 0, 1);
+        var matchLeftAdjusted = 1-Mathf.Clamp(ExtensionMethods.map(distLeft, 0, _mapScale, 0, 1), 0, 1);
+        var matchRightAdjusted = 1-Mathf.Clamp(ExtensionMethods.map(distRight, 0, _mapScale, 0, 1), 0, 1);
 
         _matchVal = (matchLeftAdjusted + matchRightAdjusted) / 2;
         
@@ -47,14 +47,16 @@ public class MotionStateManager : MonoBehaviour
     private void Update()
     {
         UpdateMatchVal();
-        //statusLabel.text = "Tracking left:"+_trackingLeft+"\nTracking right:"+_trackingRight+"\nTracking success: " + (_trackingLeft && _trackingRight)+"\nOverall match: "+_match;
     }
 
     #region Utility
 
-    float map(float s, float a1, float a2, float b1, float b2)
+    public static class ExtensionMethods
     {
-        return b1 + (s-a1)*(b2-b1)/(a2-a1);
+        public static float map(float s, float a1, float a2, float b1, float b2)
+        {
+            return b1 + (s - a1) * (b2 - b1) / (a2 - a1);
+        }
     }
 
     #endregion
