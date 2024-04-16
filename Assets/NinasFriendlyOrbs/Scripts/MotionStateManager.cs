@@ -47,7 +47,7 @@ public class MotionStateManager : MonoBehaviour
     
     private void Update()
     {
-        UpdateMatchVal();
+        //UpdateMatchVal();
     }
 
     #region Utility

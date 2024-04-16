@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.433
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0036669, g: 0.0027286587, b: 0.0029479326, a: 0.433}
+  m_IndirectSpecularColor: {r: 0.0049343174, g: 0.005446792, b: 0.005365505, a: 0.433}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -562,6 +562,55 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.00616638, y: -0.029108923, z: -0.018820617}
     m_Extent: {x: 0.033926036, y: 0.042694185, z: 0.05639166}
   m_DirtyAABB: 0
+--- !u!1 &25671868
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 25671870}
+  - component: {fileID: 25671869}
+  m_Layer: 0
+  m_Name: Volume_Max
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &25671869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25671868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 0
+  sharedProfile: {fileID: 11400000, guid: a6560a915ef98420e9faacc1c7438823, type: 2}
+--- !u!4 &25671870
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25671868}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &28391442
 GameObject:
   m_ObjectHideFlags: 0
@@ -2064,7 +2113,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 194944229}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -3510,7 +3559,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &321817473
 GameObject:
@@ -4317,7 +4366,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.9607843, g: 0.84705883, b: 0.8784314, a: 1}
+  m_Color: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
   m_Intensity: 0.7
   m_Range: 10
   m_SpotAngle: 30
@@ -5475,7 +5524,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.7924528, g: 0.048593827, b: 0.3724289, a: 1}
+  m_Color: {r: 0.019879812, g: 0.77199996, b: 0.5864549, a: 1}
   m_Intensity: 4.77
   m_Range: 3.72
   m_SpotAngle: 30
@@ -7415,7 +7464,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7924,7 +7973,7 @@ Transform:
   m_Children:
   - {fileID: 585998649}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &764268565
 GameObject:
@@ -8732,7 +8781,7 @@ GameObject:
   - component: {fileID: 832575519}
   - component: {fileID: 832575518}
   m_Layer: 0
-  m_Name: Global Volume
+  m_Name: Volume_Min
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8754,7 +8803,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: a6560a915ef98420e9faacc1c7438823, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 3e48254de051f427ea45a8a36054280a, type: 2}
 --- !u!4 &832575519
 Transform:
   m_ObjectHideFlags: 0
@@ -8768,7 +8817,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &837076110
 GameObject:
@@ -11914,7 +11963,7 @@ Transform:
   - {fileID: 305577007}
   - {fileID: 1667020038}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1249907441
 GameObject:
@@ -12915,7 +12964,7 @@ PrefabInstance:
     - target: {fileID: 4066187306713683711, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4066187306713683711, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
         type: 3}
@@ -14967,7 +15016,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1742535596}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -15835,7 +15884,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: -18.816, y: 0, z: 0}
 --- !u!1 &1830574697
 GameObject:
@@ -18855,7 +18904,7 @@ Transform:
   - {fileID: 194944230}
   - {fileID: 1742535600}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2084310391
 MonoBehaviour:
@@ -18875,8 +18924,19 @@ MonoBehaviour:
   particleSystems:
   - {fileID: 6546849594728647738}
   - {fileID: 1433456914}
-  skyboxColorMin: {r: 0.103773594, g: 0.084683165, b: 0.089455776, a: 0}
-  skyboxColorMax: {r: 0.8207547, g: 0.7239676, b: 0.75259477, a: 1}
+  envLight: {fileID: 410087040}
+  volumeMin: {fileID: 832575518}
+  volumeMax: {fileID: 25671869}
+  skyboxColorMin: {r: 0.1254902, g: 0.13333334, b: 0.13210273, a: 0}
+  skyboxColorMax: {r: 0.8301887, g: 0.755785, b: 0.7774861, a: 1}
+  orbColorAMin: {r: 0, g: 1, b: 0.4, a: 0}
+  orbColorAMax: {r: 1, g: 0, b: 0.23137255, a: 0}
+  orbColorBMin: {r: 0.08627451, g: 0.39607844, b: 0.85882354, a: 0}
+  orbColorBMax: {r: 0.90588236, g: 0.38431373, b: 0.05490196, a: 0}
+  orbLightMin: {r: 0.019607844, g: 0.77254903, b: 0.5882353, a: 0}
+  orbLightMax: {r: 0.7921569, g: 0.047058824, b: 0.37254903, a: 0}
+  envLightMin: {r: 0.67058825, g: 0.67058825, b: 0.67058825, a: 0}
+  envLightMax: {r: 0.90588236, g: 0.827451, b: 0.85882354, a: 0}
 --- !u!114 &2084310392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19479,7 +19539,7 @@ PrefabInstance:
     - target: {fileID: 4066187306713683711, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4066187306713683711, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
         type: 3}
