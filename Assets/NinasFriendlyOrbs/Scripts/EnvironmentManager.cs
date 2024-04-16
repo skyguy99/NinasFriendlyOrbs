@@ -23,7 +23,16 @@ public class EnvironmentManager : MonoBehaviour
 
     private void UpdateOrb(float f)
     {
-        orb.GetComponent<Renderer>().material.SetFloat("_EmissiveMult", Mathf.Pow(f,2f));
+        //orb.GetComponent<Renderer>().material.SetFloat("_EmissiveMult", Mathf.Pow(f,2f));
+    }
+
+    private void OnDisable()
+    {
+        //Reset values
+        orb.GetComponent<Renderer>().material.SetFloat("_EmissiveMult", 2f);
+        
+        skybox.SetColor("_Top", skyboxColorMin*0.4f);
+        skybox.SetColor("_Bottom", skyboxColorMin);
     }
 
     private void UpdateParticleSystem(float f)
