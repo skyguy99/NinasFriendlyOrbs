@@ -18,6 +18,7 @@ public class MotionStateManager : MonoBehaviour
     [SerializeField] private Transform rightHand;
     
     [SerializeField] private float _matchVal;
+    [SerializeField] public float _matchPower = 1f;
     private float _mapScale = 3f;
 
     public void SetTrackingLeft(bool b) { _trackingLeft = b;}
@@ -37,8 +38,8 @@ public class MotionStateManager : MonoBehaviour
         var matchLeftAdjusted = 1-Mathf.Clamp(ExtensionMethods.map(distLeft, 0, _mapScale, 0, 1), 0, 1);
         var matchRightAdjusted = 1-Mathf.Clamp(ExtensionMethods.map(distRight, 0, _mapScale, 0, 1), 0, 1);
 
-        _matchVal = (matchLeftAdjusted + matchRightAdjusted) / 2;
-        
+        _matchVal = Mathf.Pow(((matchLeftAdjusted + matchRightAdjusted) / 2), _matchPower);
+
         // statusLabel.text = "Dist left: " + distLeft + "\nDist right" + distRight;
         //statusLabel.text = "Dist left: " + distLeft + "\nDist left adjusted" + matchLeftAdjusted+"\nDist right: " + distRight + "\nDist right adjusted" + matchRightAdjusted;
         statusLabel.text = "Match val" + _matchVal;
