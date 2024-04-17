@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.433
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0049343174, g: 0.005446792, b: 0.005365505, a: 0.433}
+  m_IndirectSpecularColor: {r: 0.0073029194, g: 0.0076249857, b: 0.0076140203, a: 0.433}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3497,7 +3497,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 1
   SpatializePostEffects: 0
@@ -13089,6 +13089,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 578349681034853659, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
         type: 3}
+      propertyPath: ShapeModule.angle
+      value: 39
+      objectReference: {fileID: 0}
+    - target: {fileID: 578349681034853659, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
+        type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 0.05
       objectReference: {fileID: 0}
@@ -13115,7 +13120,7 @@ PrefabInstance:
     - target: {fileID: 4066187306713683711, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.92
+      value: -0.813
       objectReference: {fileID: 0}
     - target: {fileID: 4066187306713683711, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
         type: 3}
@@ -19690,8 +19695,38 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 578349681034853659, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
         type: 3}
+      propertyPath: ShapeModule.angle
+      value: 39
+      objectReference: {fileID: 0}
+    - target: {fileID: 578349681034853659, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
+        type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 578349681034853659, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
+        type: 3}
+      propertyPath: CustomDataModule.vector0_0.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 578349681034853659, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
+        type: 3}
+      propertyPath: CustomDataModule.vector0_1.scalar
+      value: 0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 578349681034853659, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
+        type: 3}
+      propertyPath: CustomDataModule.vector0_2.scalar
+      value: 7.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 578349681034853659, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
+        type: 3}
+      propertyPath: CustomDataModule.vector0_0.minScalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 578349681034853659, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
+        type: 3}
+      propertyPath: CustomDataModule.vectorComponentCount0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4066187306713683711, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
         type: 3}

@@ -28,6 +28,9 @@ public class EnvironmentManager : MonoBehaviour
     [SerializeField] public Color envLightMin;
     [SerializeField] public Color envLightMax;
 
+    [SerializeField] float butterflyTexMinVal = 0.42f;
+    [SerializeField] float butterflyTexMaxVal = -0.15f;
+
     private void UpdateVolumes(float f)
     {
         volumeMax.weight = f;
@@ -61,13 +64,28 @@ public class EnvironmentManager : MonoBehaviour
     {
         var emitVal = MotionStateManager.ExtensionMethods.map(f, 0, 1, 2.5f, 20f);
         var speedVal = MotionStateManager.ExtensionMethods.map(f, 0, 1, 0.1f, 1f);
+        var texVal = MotionStateManager.ExtensionMethods.map(f, 0, 1, butterflyTexMinVal, butterflyTexMaxVal);
 
         foreach (ParticleSystem p in particleSystems)
         {
             p.emissionRate = emitVal;
             p.startSpeed = speedVal;
-        }
             
+            
+            //This was when I tried to set custom particle data
+            // List<Vector4> customData = new List<Vector4>();
+            // p.GetCustomParticleData(customData, ParticleSystemCustomData.Custom1);
+            //
+            // int particleCount = p.particleCount;
+            // ParticleSystem.Particle[] particles = new ParticleSystem.Particle[particleCount];
+            // p.GetParticles(particles);
+            //
+            // for (int i = 0; i < particles.Length; i++)
+            // {
+            //     customData[i] = new Vector4(1, texVal, 0, 0);
+            // }
+            // p.SetCustomParticleData(customData, ParticleSystemCustomData.Custom1);
+        }
     }
 
     private void OnDisable()
