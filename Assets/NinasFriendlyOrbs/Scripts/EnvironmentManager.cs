@@ -31,15 +31,18 @@ public class EnvironmentManager : MonoBehaviour
 
     [SerializeField] public Color butterfliesColorMin;
     [SerializeField] public Color butterfliesColorMax;
+    
+    [SerializeField] public Color butterflyTargetColorMin;
+    [SerializeField] public Color butterflyTargetColorMax;
 
     private void Start()
     {
         motionStateManager = GetComponent<MotionStateManager>();
     }
 
-    private void UpdateButterflies(float f)
+    private void UpdateButterflyTargets(float f)
     {
-        Color butterflyCol = Color.Lerp(butterfliesColorMin, butterfliesColorMax, Mathf.Pow(f,1.5f));
+        Color butterflyCol = Color.Lerp(butterflyTargetColorMin, butterflyTargetColorMax, Mathf.Pow(f,1.5f));
 
         butterflyMat.SetColor("_BaseColor", butterflyCol);
         butterflyMat.SetColor("_EmissionColor", butterflyCol);
@@ -111,6 +114,6 @@ public class EnvironmentManager : MonoBehaviour
         UpdateOrb(motionStateManager.GetMatchVal());
         UpdateParticleSystem(motionStateManager.GetMatchVal());
         UpdateVolumes(motionStateManager.GetMatchVal());
-        UpdateButterflies(motionStateManager.GetMatchVal());
+        UpdateButterflyTargets(motionStateManager.GetMatchVal());
     }
 }
