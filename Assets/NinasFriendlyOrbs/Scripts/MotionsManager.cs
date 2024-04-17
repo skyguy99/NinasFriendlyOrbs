@@ -9,7 +9,7 @@ public class MotionsManager : MonoBehaviour
     [SerializeField] private MotionStateManager motionStateManager;
     [SerializeField] public int currentMotion;
 
-    [SerializeField] public float trackerDefaultSpeed = 0.5f;
+    [SerializeField] public float trackerDefaultSpeed = 0.25f;
     [SerializeField] private float trackerCurrentSpeed;
     [SerializeField] public int motionLoopCount = 3;
     private int currentMotionLoopCount;

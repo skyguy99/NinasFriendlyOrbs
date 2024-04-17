@@ -7062,7 +7062,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 63fe5e6b8d1614eb1afdd579d5d231d9,
         type: 3}
       propertyPath: m_Name
-      value: Dune
+      value: Environment dunes
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 63fe5e6b8d1614eb1afdd579d5d231d9,
         type: 3}
