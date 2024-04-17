@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.433
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0049343174, g: 0.005446792, b: 0.005365505, a: 0.433}
+  m_IndirectSpecularColor: {r: 0.0051789926, g: 0.005677395, b: 0.005601626, a: 0.433}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2737,7 +2737,7 @@ MonoBehaviour:
   _follow: 1
   _startPosition: 0.019999999552965164
   preserveUniformSpeedWithOffset: 0
-  _followSpeed: 1
+  _followSpeed: 0
   _followDuration: 1
   _speedModifier:
     blend: 1
@@ -2748,7 +2748,19 @@ MonoBehaviour:
       m_Calls: []
   _unityOnBeginningReached:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2084310392}
+        m_TargetAssemblyTypeName: MotionsManager, Assembly-CSharp
+        m_MethodName: MotionDidFinish
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &273229865
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17148,7 +17160,7 @@ MonoBehaviour:
   _follow: 1
   _startPosition: 0.019999999552965164
   preserveUniformSpeedWithOffset: 0
-  _followSpeed: 1
+  _followSpeed: 0
   _followDuration: 1
   _speedModifier:
     blend: 1
@@ -20970,8 +20982,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50b5025ec522a4dc7b869ef0073c495d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  motionStateManager: {fileID: 0}
+  motionStateManager: {fileID: 2084310389}
   currentMotion: 0
+  trackerDefaultSpeed: 0.5
+  trackerCurrentSpeed: 0
   motionLoopCount: 3
   motions:
   - splineLeft: {fileID: 531547658}
