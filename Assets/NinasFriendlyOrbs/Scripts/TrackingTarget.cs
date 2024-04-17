@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Dreamteck.Splines;
 using UnityEngine;
 
 public class TrackingTarget : MonoBehaviour
@@ -13,11 +14,6 @@ public class TrackingTarget : MonoBehaviour
     [SerializeField] public TargetSide targetSide;
     [SerializeField] private MotionStateManager motionStateManager;
 
-    private void Start()
-    {
-        motionStateManager = GetComponentInParent<MotionStateManager>();
-    }
-
     public void OnTriggerEnter(Collider other)
     {
         if (other.tag == "LeftHand" && targetSide == TargetSide.Left)
@@ -26,7 +22,6 @@ public class TrackingTarget : MonoBehaviour
         if (other.tag == "RightHand" && targetSide == TargetSide.Right)
             motionStateManager.SetTrackingRight(true);
         
-        Debug.Log(other.name);
     }
 
     public void OnTriggerExit(Collider other)
@@ -36,5 +31,15 @@ public class TrackingTarget : MonoBehaviour
         
         if (other.tag == "RightHand" && targetSide == TargetSide.Right)
             motionStateManager.SetTrackingRight(false);
+    }
+
+    public void SwitchMotionSpline(SplineComputer s)
+    {
+        GetComponent<SplineFollower>().spline = s;
+    }
+
+    public void SetMotionSpeed(float s)
+    {
+        GetComponent<SplineFollower>().followSpeed = s;
     }
 }

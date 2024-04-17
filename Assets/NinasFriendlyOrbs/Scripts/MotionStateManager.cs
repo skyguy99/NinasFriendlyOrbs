@@ -48,7 +48,7 @@ public class MotionStateManager : MonoBehaviour
     private void Update()
     {
         //NOTE: Comment this out if you want to control manually for testing
-        //UpdateMatchVal();
+        UpdateMatchVal();
     }
 
     #region Utility

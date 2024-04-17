@@ -14,7 +14,6 @@ public class EnvironmentManager : MonoBehaviour
     [SerializeField] public Light envLight;
     [SerializeField] public Volume volumeMin;
     [SerializeField] public Volume volumeMax;
-    //[SerializeField] public GameObject[] butterflies;
     [SerializeField] public Material butterflyMat;
 
     [SerializeField] public Color skyboxColorMin;
@@ -38,11 +37,6 @@ public class EnvironmentManager : MonoBehaviour
     {
         Color butterflyCol = Color.Lerp(butterfliesColorMin, butterfliesColorMax, Mathf.Pow(f,1.5f));
 
-        // foreach (GameObject g in butterflies)
-        // {
-        //     g.GetComponent<Renderer>().material.SetColor("_BaseColor", butterflyCol);
-        //     g.GetComponent<Renderer>().material.SetColor("_EmissionColor", butterflyCol);
-        // }
         butterflyMat.SetColor("_BaseColor", butterflyCol);
         butterflyMat.SetColor("_EmissionColor", butterflyCol);
     }
@@ -101,6 +95,9 @@ public class EnvironmentManager : MonoBehaviour
         orb.GetComponentInChildren<Light>().color = orbLightMin;
         orb.GetComponent<Renderer>().material.SetColor("_Color_A", orbColorAMin);
         orb.GetComponent<Renderer>().material.SetColor("_Color_B", orbColorAMax);
+        
+        butterflyMat.SetColor("_BaseColor", butterfliesColorMin);
+        butterflyMat.SetColor("_EmissionColor", butterfliesColorMin);
     }
     
     private void Update()
