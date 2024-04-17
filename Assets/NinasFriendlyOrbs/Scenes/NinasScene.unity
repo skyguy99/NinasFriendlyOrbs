@@ -2560,7 +2560,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 273229860}
   m_LocalRotation: {x: -0.44426417, y: 0.5501176, z: 0.44426417, w: 0.5501177}
-  m_LocalPosition: {x: -1.2548709, y: 1.504374, z: 0.3631748}
+  m_LocalPosition: {x: -1.2548709, y: 1.6243739, z: 0.3631748}
   m_LocalScale: {x: 0.27522, y: 0.27522, z: 0.27522}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2664,14 +2664,14 @@ MonoBehaviour:
     useClippedPercent: 0
     keys: []
   _clipFromSample:
-    position: {x: -1.2621233, y: 1.4705234, z: 0.3631748}
+    position: {x: -1.2621233, y: 1.5905232, z: 0.3631748}
     up: {x: 0, y: 1, z: 0}
     forward: {x: 0.2094941, y: 0.97780997, z: -0.00000002497364}
     color: {r: 0, g: 0, b: 0, a: 0}
     size: 0
     percent: 0
   _clipToSample:
-    position: {x: -0.20159496, y: 2.3275046, z: 0.36317468}
+    position: {x: -0.20159496, y: 2.4475045, z: 0.36317468}
     up: {x: 0, y: 1, z: 0}
     forward: {x: 0.999926, y: 0.012179077, z: 0.0000011687731}
     color: {r: 0, g: 0, b: 0, a: 0}
@@ -2718,14 +2718,14 @@ MonoBehaviour:
   targetRigidbody2D: {fileID: 0}
   targetTransform: {fileID: 273229863}
   _result:
-    position: {x: -1.2548709, y: 1.504374, z: 0.3631748}
+    position: {x: -1.2548709, y: 1.6243739, z: 0.3631748}
     up: {x: 0, y: 1, z: 0}
     forward: {x: 0.21051742, y: 0.97758996, z: -0.000000025095627}
     color: {r: 0, g: 0, b: 0, a: 0}
     size: 0
     percent: 0.019999999552965164
   _finalResult:
-    position: {x: -1.2548709, y: 1.504374, z: 0.3631748}
+    position: {x: -1.2548709, y: 1.6243739, z: 0.3631748}
     up: {x: -0.000000022860547, y: 1, z: 0.00000002442777}
     forward: {x: 0.21051744, y: 0.9775901, z: 0.000000029802322}
     color: {r: 0, g: 0, b: 0, a: 0}
@@ -4487,7 +4487,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 353591711}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.06, y: -5.21, z: -0.16}
+  m_LocalPosition: {x: -0.06, y: -5.09, z: -0.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6386,7 +6386,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 531547658}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.06, y: -5.21, z: -0.16}
+  m_LocalPosition: {x: -0.06, y: -5.09, z: -0.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16983,7 +16983,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1739638115}
   m_LocalRotation: {x: -0.4442642, y: -0.55011755, z: -0.44426417, w: 0.5501176}
-  m_LocalPosition: {x: 1.2107183, y: 1.504374, z: 0.3631748}
+  m_LocalPosition: {x: 1.2107183, y: 1.6243739, z: 0.3631748}
   m_LocalScale: {x: 0.27522, y: 0.27522, z: 0.27522}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17087,14 +17087,14 @@ MonoBehaviour:
     useClippedPercent: 0
     keys: []
   _clipFromSample:
-    position: {x: 1.2179707, y: 1.4705234, z: 0.3631748}
+    position: {x: 1.2179707, y: 1.5905232, z: 0.3631748}
     up: {x: 0, y: 1, z: 0}
     forward: {x: -0.2094941, y: 0.97780997, z: 0.00000002497364}
     color: {r: 0, g: 0, b: 0, a: 0}
     size: 0
     percent: 0
   _clipToSample:
-    position: {x: 0.15744258, y: 2.3275046, z: 0.36317474}
+    position: {x: 0.15744258, y: 2.4475045, z: 0.36317474}
     up: {x: 0, y: 1, z: 0}
     forward: {x: -0.999926, y: 0.012179041, z: -0.0000011687694}
     color: {r: 0, g: 0, b: 0, a: 0}
@@ -17141,14 +17141,14 @@ MonoBehaviour:
   targetRigidbody2D: {fileID: 0}
   targetTransform: {fileID: 1739638118}
   _result:
-    position: {x: 1.2107183, y: 1.504374, z: 0.3631748}
+    position: {x: 1.2107183, y: 1.6243739, z: 0.3631748}
     up: {x: 0, y: 1, z: 0}
     forward: {x: -0.21051742, y: 0.97758996, z: 0.000000025095627}
     color: {r: 0, g: 0, b: 0, a: 0}
     size: 0
     percent: 0.019999999552965164
   _finalResult:
-    position: {x: 1.2107183, y: 1.504374, z: 0.3631748}
+    position: {x: 1.2107183, y: 1.6243739, z: 0.3631748}
     up: {x: 0, y: 1, z: -0.000000025095627}
     forward: {x: -0.21051738, y: 0.97759014, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
@@ -20986,7 +20986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   motionStateManager: {fileID: 2084310389}
   currentMotion: 0
-  trackerDefaultSpeed: 0.5
+  trackerDefaultSpeed: 0.2
   trackerCurrentSpeed: 0
   motionLoopCount: 3
   motions:
