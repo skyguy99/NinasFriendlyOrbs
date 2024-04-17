@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.433
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0073029194, g: 0.0076249857, b: 0.0076140203, a: 0.433}
+  m_IndirectSpecularColor: {r: 0.0049343174, g: 0.005446792, b: 0.005365505, a: 0.433}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13089,13 +13089,28 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 578349681034853659, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
         type: 3}
+      propertyPath: ShapeModule.type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 578349681034853659, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
+        type: 3}
       propertyPath: ShapeModule.angle
       value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 578349681034853659, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
         type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 578349681034853659, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
+        type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 578349681034853659, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
+        type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 0.05
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 4066187306713683711, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
         type: 3}
@@ -13120,12 +13135,12 @@ PrefabInstance:
     - target: {fileID: 4066187306713683711, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.813
+      value: -1.09
       objectReference: {fileID: 0}
     - target: {fileID: 4066187306713683711, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.04
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 4066187306713683711, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
         type: 3}
@@ -19094,6 +19109,8 @@ MonoBehaviour:
   orbLightMax: {r: 0.7921569, g: 0.047058824, b: 0.37254903, a: 0}
   envLightMin: {r: 0.67058825, g: 0.67058825, b: 0.67058825, a: 0}
   envLightMax: {r: 0.90588236, g: 0.827451, b: 0.85882354, a: 0}
+  butterfliesColorMin: {r: 0.11764706, g: 0.9137255, b: 0.9098039, a: 1}
+  butterfliesColorMax: {r: 0.972549, g: 0.3882353, b: 0.4745098, a: 1}
 --- !u!114 &2084310392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19695,13 +19712,28 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 578349681034853659, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
         type: 3}
+      propertyPath: ShapeModule.type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 578349681034853659, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
+        type: 3}
       propertyPath: ShapeModule.angle
       value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 578349681034853659, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
         type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 578349681034853659, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
+        type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 578349681034853659, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
+        type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 0.05
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 578349681034853659, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
         type: 3}
@@ -19751,12 +19783,12 @@ PrefabInstance:
     - target: {fileID: 4066187306713683711, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.81
+      value: 1.12
       objectReference: {fileID: 0}
     - target: {fileID: 4066187306713683711, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.04
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4066187306713683711, guid: 5d58ca68ee73a45e08fc711e7d07f8df,
         type: 3}

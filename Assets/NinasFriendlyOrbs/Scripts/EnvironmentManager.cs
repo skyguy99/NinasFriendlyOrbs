@@ -28,8 +28,8 @@ public class EnvironmentManager : MonoBehaviour
     [SerializeField] public Color envLightMin;
     [SerializeField] public Color envLightMax;
 
-    [SerializeField] float butterflyTexMinVal = 0.42f;
-    [SerializeField] float butterflyTexMaxVal = -0.15f;
+    [SerializeField] public Color butterfliesColorMin;
+    [SerializeField] public Color butterfliesColorMax;
 
     private void UpdateVolumes(float f)
     {
@@ -63,28 +63,15 @@ public class EnvironmentManager : MonoBehaviour
     private void UpdateParticleSystem(float f)
     {
         var emitVal = MotionStateManager.ExtensionMethods.map(f, 0, 1, 2.5f, 20f);
-        var speedVal = MotionStateManager.ExtensionMethods.map(f, 0, 1, 0.1f, 1f);
-        var texVal = MotionStateManager.ExtensionMethods.map(f, 0, 1, butterflyTexMinVal, butterflyTexMaxVal);
+        var speedVal = MotionStateManager.ExtensionMethods.map(f, 0, 1, 0.1f, 0.75f);
+        Color butterflyCol = Color.Lerp(butterfliesColorMin, butterfliesColorMax, Mathf.Pow(f,1.5f));
 
         foreach (ParticleSystem p in particleSystems)
         {
             p.emissionRate = emitVal;
             p.startSpeed = speedVal;
+            p.GetComponent<Renderer>().material.SetColor("_Color", butterflyCol);
             
-            
-            //This was when I tried to set custom particle data
-            // List<Vector4> customData = new List<Vector4>();
-            // p.GetCustomParticleData(customData, ParticleSystemCustomData.Custom1);
-            //
-            // int particleCount = p.particleCount;
-            // ParticleSystem.Particle[] particles = new ParticleSystem.Particle[particleCount];
-            // p.GetParticles(particles);
-            //
-            // for (int i = 0; i < particles.Length; i++)
-            // {
-            //     customData[i] = new Vector4(1, texVal, 0, 0);
-            // }
-            // p.SetCustomParticleData(customData, ParticleSystemCustomData.Custom1);
         }
     }
 
