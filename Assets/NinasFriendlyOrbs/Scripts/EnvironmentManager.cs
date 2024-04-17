@@ -6,7 +6,7 @@ using UnityEngine.Rendering;
 
 public class EnvironmentManager : MonoBehaviour
 {
-    [SerializeField] public MotionStateManager motionStateManager;
+    [SerializeField] private MotionStateManager motionStateManager;
 
     [SerializeField] public Material skybox;
     [SerializeField] public GameObject orb;
@@ -32,6 +32,10 @@ public class EnvironmentManager : MonoBehaviour
     [SerializeField] public Color butterfliesColorMin;
     [SerializeField] public Color butterfliesColorMax;
 
+    private void Start()
+    {
+        motionStateManager = GetComponent<MotionStateManager>();
+    }
 
     private void UpdateButterflies(float f)
     {

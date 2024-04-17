@@ -22,8 +22,9 @@ public class MotionStateManager : MonoBehaviour
     private float _mapScale = 3f;
 
     public void SetTrackingLeft(bool b) { _trackingLeft = b;}
-    
     public void SetTrackingRight(bool b) { _trackingRight = b;}
+    public TrackingTarget GetTrackingLeft() {return leftTrackingTarget;}
+    public TrackingTarget GetTrackingRight() {return rightTrackingTarget;}
     public float GetMatchVal() { return _matchVal;}
 
     private void UpdateMatchVal()
