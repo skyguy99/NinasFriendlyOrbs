@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Dreamteck.Splines;
+using TMPro;
 using UnityEngine;
 
 public class MotionsManager : MonoBehaviour
@@ -12,6 +13,8 @@ public class MotionsManager : MonoBehaviour
     [SerializeField] public AudioSource audioSource;
     [SerializeField] public AudioClip introAudioClip;
     [SerializeField] public AudioClip[] motionAudioClips;
+
+    [SerializeField] public TextMeshPro label;
 
     [SerializeField] public float trackerDefaultSpeed = 0.25f;
     [SerializeField] private float trackerCurrentSpeed;
@@ -42,7 +45,8 @@ public class MotionsManager : MonoBehaviour
         int count = 3;
         while (count > 0) {
            
-            // display something...
+            //StopAllCoroutines();
+            StartCoroutine(SetLabelText(count.ToString(), 3f));
             yield return new WaitForSeconds(1);
             count --;
             Debug.Log("Start countdown: "+count);
@@ -50,6 +54,8 @@ public class MotionsManager : MonoBehaviour
        
         // Start
         Debug.Log("== START GAME ==");
+        StopAllCoroutines();
+        StartCoroutine(SetLabelText("Begin experience", 3f));
 
         t = 0f;
         UpdateMotionAudioClip();
@@ -64,7 +70,8 @@ public class MotionsManager : MonoBehaviour
         int count = 3;
         while (count > 0) {
            
-            // display something...
+            //StopAllCoroutines();
+            StartCoroutine(SetLabelText(count.ToString(), 3f));
             yield return new WaitForSeconds(1);
             count --;
             Debug.Log("Next motion countdown: "+count);
@@ -72,6 +79,8 @@ public class MotionsManager : MonoBehaviour
        
         // Start
         Debug.Log("== SWITCHING MOTION TO INDEX: "+currentMotion+" ==");
+        StopAllCoroutines();
+        StartCoroutine(SetLabelText("Starting next motion", 3f));
 
         t = 0f;
         UpdateMotionAudioClip();
@@ -135,6 +144,13 @@ public class MotionsManager : MonoBehaviour
         //Intro = 3s
         //Motion A = 10.1s * 3 loops
         //Motion B = (3s countdown transition) + (8.07s * 3 loops)
+    }
+
+    IEnumerator SetLabelText(string s, float delay)
+    {
+        label.text = s;
+        yield return new WaitForSeconds(delay);
+        label.text = "";
     }
 
     private void Update()

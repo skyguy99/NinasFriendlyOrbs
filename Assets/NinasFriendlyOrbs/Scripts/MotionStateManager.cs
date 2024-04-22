@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class MotionStateManager : MonoBehaviour
 {
-    [SerializeField] public TextMeshPro statusLabel;
 
     private bool _trackingLeft = false;
     private bool _trackingRight = false;
@@ -44,7 +43,7 @@ public class MotionStateManager : MonoBehaviour
 
         // statusLabel.text = "Dist left: " + distLeft + "\nDist right" + distRight;
         //statusLabel.text = "Dist left: " + distLeft + "\nDist left adjusted" + matchLeftAdjusted+"\nDist right: " + distRight + "\nDist right adjusted" + matchRightAdjusted;
-        statusLabel.text = "Match val" + _matchVal;
+        //statusLabel.text = "Match val" + _matchVal;
     }
     
     private void Update()
