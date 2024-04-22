@@ -18,7 +18,6 @@ public class MotionStateManager : MonoBehaviour
     [SerializeField] private Transform rightHand;
     
     [SerializeField] private float _matchVal;
-    [SerializeField] private float _zOffset = -0.75f;
     [SerializeField] public float _matchPower = 1f;
     private float _mapScale = 3f;
 
@@ -35,8 +34,8 @@ public class MotionStateManager : MonoBehaviour
         rightHand = GameObject.FindWithTag("RightHand").transform;
 
         //We offset the distance to adjust for tracking targets being in front of user on z axis
-        var distLeft = Vector3.Distance(leftHand.position, new Vector3(leftTrackingTarget.transform.position.x, leftTrackingTarget.transform.position.y, leftTrackingTarget.transform.position.z+_zOffset));
-        var distRight = Vector3.Distance(rightHand.position, new Vector3(rightTrackingTarget.transform.position.x, rightTrackingTarget.transform.position.y, rightTrackingTarget.transform.position.z+_zOffset));
+        var distLeft = Vector3.Distance(leftHand.position, leftTrackingTarget.transform.position);
+        var distRight = Vector3.Distance(rightHand.position, rightTrackingTarget.transform.position);
 
         var matchLeftAdjusted = 1-Mathf.Clamp(ExtensionMethods.map(distLeft, 0, _mapScale, 0, 1), 0, 1);
         var matchRightAdjusted = 1-Mathf.Clamp(ExtensionMethods.map(distRight, 0, _mapScale, 0, 1), 0, 1);

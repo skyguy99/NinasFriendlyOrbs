@@ -35,11 +35,11 @@ public class TrackingTarget : MonoBehaviour
 
     public void SwitchMotionSpline(SplineComputer s)
     {
-        GetComponent<SplineFollower>().spline = s;
+        GetComponentInParent<SplineFollower>().spline = s;
     }
 
     public void SetMotionSpeed(float s)
     {
-        GetComponent<SplineFollower>().followSpeed = s;
+        GetComponentInParent<SplineFollower>().followSpeed = s;
     }
 }

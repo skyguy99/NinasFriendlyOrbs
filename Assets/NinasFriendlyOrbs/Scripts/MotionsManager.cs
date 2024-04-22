@@ -49,6 +49,8 @@ public class MotionsManager : MonoBehaviour
         // Start
         Debug.Log("== START GAME ==");
         
+        UpdateMotionAudioClip();
+        
         motionStateManager.GetTrackingLeft().SetMotionSpeed(trackerDefaultSpeed);
         motionStateManager.GetTrackingRight().SetMotionSpeed(trackerDefaultSpeed);
     }
