@@ -133,8 +133,8 @@ public class MotionsManager : MonoBehaviour
         
         // -- Current values --
         //Intro = 3s
-        //Motion A = 10.1s
-        //Motion B = (3s countdown transition) + 8.07s
+        //Motion A = 10.1s * 3 loops
+        //Motion B = (3s countdown transition) + (8.07s * 3 loops)
     }
 
     private void Update()

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.433
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0049343174, g: 0.005446792, b: 0.005365505, a: 0.433}
+  m_IndirectSpecularColor: {r: 0.007855592, g: 0.00812619, b: 0.008131346, a: 0.433}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -695,7 +695,7 @@ GameObject:
   - component: {fileID: 53564338}
   - component: {fileID: 53564339}
   m_Layer: 0
-  m_Name: Target
+  m_Name: Left Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -729,7 +729,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 53564333}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -780,12 +780,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 53564333}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.44426414, y: -0.5501176, z: -0.4442642, w: 0.55011755}
-  m_LocalPosition: {x: 4.05, y: -0.06, z: 0.01}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.7857415, y: 1.265, z: -0.00006765127}
+  m_LocalScale: {x: 0.17285997, y: 0.17285997, z: 0.17285995}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 273229863}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &53564338
 Rigidbody:
@@ -826,6 +826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46433066ab4ee4f0da528439692ce45c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  butterflyObject: {fileID: 273229863}
   targetSide: 1
   motionStateManager: {fileID: 2084310389}
 --- !u!1 &65679224
@@ -2706,12 +2707,11 @@ Transform:
   m_GameObject: {fileID: 273229860}
   serializedVersion: 2
   m_LocalRotation: {x: -0.44426414, y: 0.5501176, z: 0.4442642, w: 0.55011755}
-  m_LocalPosition: {x: -0.7962445, y: 1.1035585, z: 0.7000152}
+  m_LocalPosition: {x: -0.7962445, y: 1.2654936, z: 0.7000152}
   m_LocalScale: {x: 0.17285995, y: 0.17285995, z: 0.17285995}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1569370717}
-  - {fileID: 53564337}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &273229864
@@ -2810,14 +2810,14 @@ MonoBehaviour:
     useClippedPercent: 0
     keys: []
   _clipFromSample:
-    position: {x: -0.8007996, y: 1.0822976, z: 0.7000152}
+    position: {x: -0.8007996, y: 1.2442327, z: 0.7000152}
     up: {x: 0, y: 0.6280792, z: 0}
     forward: {x: 0.13157888, y: 0.61414206, z: -0.000000015685423}
     color: {r: 0, g: 0, b: 0, a: 0}
     size: 0
     percent: 0
   _clipToSample:
-    position: {x: -0.13470384, y: 1.6205497, z: 0.7000151}
+    position: {x: -0.13470384, y: 1.7824848, z: 0.7000151}
     up: {x: 0, y: 0.6280792, z: 0}
     forward: {x: 0.6280327, y: 0.0076494245, z: 0.00000073408205}
     color: {r: 0, g: 0, b: 0, a: 0}
@@ -2864,14 +2864,14 @@ MonoBehaviour:
   targetRigidbody2D: {fileID: 0}
   targetTransform: {fileID: 273229863}
   _result:
-    position: {x: -0.7962445, y: 1.1035585, z: 0.7000152}
+    position: {x: -0.7962445, y: 1.2654936, z: 0.7000152}
     up: {x: 0, y: 0.6280792, z: 0}
     forward: {x: 0.1322216, y: 0.6140039, z: -0.00000001576204}
     color: {r: 0, g: 0, b: 0, a: 0}
     size: 0
     percent: 0.019999999552965164
   _finalResult:
-    position: {x: -0.7962445, y: 1.1035585, z: 0.7000152}
+    position: {x: -0.7962445, y: 1.2654936, z: 0.7000152}
     up: {x: 0.0000000017399024, y: 0.62807924, z: -0.000000002536705}
     forward: {x: 0.21051738, y: 0.97759014, z: -0.000000029802322}
     color: {r: 0, g: 0, b: 0, a: 0}
@@ -4572,7 +4572,7 @@ Transform:
   m_GameObject: {fileID: 353591711}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.045771, y: -3.1136, z: 0.37142}
+  m_LocalPosition: {x: -0.045771, y: -2.951665, z: 0.37142}
   m_LocalScale: {x: 0.6280792, y: 0.6280792, z: 0.6280792}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5801,7 +5801,7 @@ Transform:
   m_GameObject: {fileID: 480066926}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.045771, y: -3.2706, z: 0.40283}
+  m_LocalPosition: {x: -0.045771, y: -3.108665, z: 0.40283}
   m_LocalScale: {x: 0.6280792, y: 0.6280792, z: 0.6280792}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6471,7 +6471,7 @@ Transform:
   m_GameObject: {fileID: 531547658}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.045771, y: -3.1136, z: 0.37142}
+  m_LocalPosition: {x: -0.045771, y: -2.951665, z: 0.37142}
   m_LocalScale: {x: 0.6280792, y: 0.6280792, z: 0.6280792}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13548,7 +13548,7 @@ Transform:
   m_GameObject: {fileID: 1177743355}
   serializedVersion: 2
   m_LocalRotation: {x: -0.08880766, y: 0.7015078, z: 0.08880766, w: 0.7015078}
-  m_LocalPosition: {x: 0.72047, y: -3.2329, z: 0.40283}
+  m_LocalPosition: {x: 0.72047, y: -3.0709648, z: 0.40283}
   m_LocalScale: {x: 0.6280792, y: 0.6280792, z: 0.6280792}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16865,7 +16865,7 @@ GameObject:
   - component: {fileID: 1713251851}
   - component: {fileID: 1713251850}
   m_Layer: 0
-  m_Name: Target
+  m_Name: Right Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16879,12 +16879,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1713251848}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.44426423, y: 0.55011755, z: 0.4442641, w: 0.5501176}
-  m_LocalPosition: {x: -4.05, y: -0.03, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.000000014901161, w: 1}
+  m_LocalPosition: {x: 0.747271, y: 1.2644018, z: -0.00006765127}
+  m_LocalScale: {x: 0.17285994, y: 0.17285997, z: 0.17285995}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1739638118}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1713251850
 MonoBehaviour:
@@ -16898,6 +16898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46433066ab4ee4f0da528439692ce45c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  butterflyObject: {fileID: 1739638118}
   targetSide: 0
   motionStateManager: {fileID: 2084310389}
 --- !u!54 &1713251851
@@ -16955,7 +16956,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1713251848}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -17243,12 +17244,11 @@ Transform:
   m_GameObject: {fileID: 1739638115}
   serializedVersion: 2
   m_LocalRotation: {x: -0.44426423, y: -0.55011755, z: -0.4442641, w: 0.5501176}
-  m_LocalPosition: {x: 0.7523407, y: 1.1035585, z: 0.7000152}
+  m_LocalPosition: {x: 0.7523407, y: 1.2654936, z: 0.7000152}
   m_LocalScale: {x: 0.17285995, y: 0.17285995, z: 0.17285995}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 777743309}
-  - {fileID: 1713251849}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -77.847, y: 90, z: 0}
 --- !u!114 &1739638119
@@ -17347,14 +17347,14 @@ MonoBehaviour:
     useClippedPercent: 0
     keys: []
   _clipFromSample:
-    position: {x: 0.7568958, y: 1.0822976, z: 0.7000152}
+    position: {x: 0.7568958, y: 1.2442327, z: 0.7000152}
     up: {x: 0, y: 0.6280792, z: 0}
     forward: {x: -0.13157888, y: 0.61414206, z: 0.000000015685423}
     color: {r: 0, g: 0, b: 0, a: 0}
     size: 0
     percent: 0
   _clipToSample:
-    position: {x: 0.09080016, y: 1.6205497, z: 0.7000151}
+    position: {x: 0.09080016, y: 1.7824848, z: 0.7000151}
     up: {x: 0, y: 0.6280792, z: 0}
     forward: {x: -0.6280327, y: 0.007649402, z: -0.00000073407966}
     color: {r: 0, g: 0, b: 0, a: 0}
@@ -17401,14 +17401,14 @@ MonoBehaviour:
   targetRigidbody2D: {fileID: 0}
   targetTransform: {fileID: 1739638118}
   _result:
-    position: {x: 0.7523407, y: 1.1035585, z: 0.7000152}
+    position: {x: 0.7523407, y: 1.2654936, z: 0.7000152}
     up: {x: 0, y: 0.6280792, z: 0}
     forward: {x: -0.1322216, y: 0.6140039, z: 0.00000001576204}
     color: {r: 0, g: 0, b: 0, a: 0}
     size: 0
     percent: 0.019999999552965164
   _finalResult:
-    position: {x: 0.7523407, y: 1.1035585, z: 0.7000152}
+    position: {x: 0.7523407, y: 1.2654936, z: 0.7000152}
     up: {x: -0.00000002693385, y: 0.62807924, z: -0.000000030539745}
     forward: {x: -0.21051738, y: 0.9775902, z: 0}
     color: {r: 0, g: 0, b: 0, a: 0}
@@ -21941,6 +21941,8 @@ SceneRoots:
   - {fileID: 762007176}
   - {fileID: 96362750}
   - {fileID: 1093630176}
+  - {fileID: 53564337}
+  - {fileID: 1713251849}
   - {fileID: 273229863}
   - {fileID: 1739638118}
   - {fileID: 353591713}

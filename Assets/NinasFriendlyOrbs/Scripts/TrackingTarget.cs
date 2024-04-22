@@ -11,6 +11,8 @@ public class TrackingTarget : MonoBehaviour
         Right,
         Left
     }
+
+    [SerializeField] public Transform butterflyObject;
     [SerializeField] public TargetSide targetSide;
     [SerializeField] private MotionStateManager motionStateManager;
 
@@ -35,11 +37,16 @@ public class TrackingTarget : MonoBehaviour
 
     public void SwitchMotionSpline(SplineComputer s)
     {
-        GetComponentInParent<SplineFollower>().spline = s;
+        butterflyObject.GetComponent<SplineFollower>().spline = s;
     }
 
     public void SetMotionSpeed(float s)
     {
-        GetComponentInParent<SplineFollower>().followSpeed = s;
+        butterflyObject.GetComponent<SplineFollower>().followSpeed = s;
+    }
+
+    private void Update()
+    {
+        transform.position = new Vector3(butterflyObject.transform.position.x, butterflyObject.transform.position.y, transform.position.z);
     }
 }
