@@ -8,6 +8,10 @@ public class MotionsManager : MonoBehaviour
 {
     [SerializeField] private MotionStateManager motionStateManager;
     [SerializeField] public int currentMotion;
+    
+    [SerializeField] public AudioSource audioSource;
+    [SerializeField] public AudioClip introAudioClip;
+    [SerializeField] public AudioClip[] motionAudioClips;
 
     [SerializeField] public float trackerDefaultSpeed = 0.25f;
     [SerializeField] private float trackerCurrentSpeed;
@@ -31,8 +35,9 @@ public class MotionsManager : MonoBehaviour
     //TODO: Output countdown with copy to a label
     IEnumerator Countdown()
     {
+        PlayIntroAudioClip();
+        
         int count = 3;
-       
         while (count > 0) {
            
             // display something...
@@ -62,6 +67,8 @@ public class MotionsManager : MonoBehaviour
        
         // Start
         Debug.Log("== SWITCHING MOTION TO INDEX: "+currentMotion+" ==");
+        
+        UpdateMotionAudioClip();
         
         motionStateManager.GetTrackingLeft().SetMotionSpeed(trackerDefaultSpeed);
         motionStateManager.GetTrackingRight().SetMotionSpeed(trackerDefaultSpeed);
@@ -99,9 +106,24 @@ public class MotionsManager : MonoBehaviour
 
         StartCoroutine(WaitToStartNextMotion());
     }
-    private void Update()
+    
+    public void PlayIntroAudioClip()
     {
-        //motionStateManager.GetTrackingLeft().SetMotionSpeed(trackerCurrentSpeed);
-       // motionStateManager.GetTrackingRight().SetMotionSpeed(trackerCurrentSpeed);
+        audioSource.clip = introAudioClip;
+        audioSource.Play();
+    }
+
+    public void UpdateMotionAudioClip()
+    {
+        audioSource.clip = motionAudioClips[currentMotion];
+        audioSource.Play();
+    }
+
+    public void PrintDurationOfCurrentMotion()
+    {
+        //This is for audio recording purposes
+        //t = d/v
+        //Debug.Log("Current motion: "+currentMotion+" | Duration: "+(1f/trackerDefaultSpeed));
+        Debug.Log(motionStateManager.GetTrackingLeft().GetComponent<SplineComputer>().CalculateLength());
     }
 }
