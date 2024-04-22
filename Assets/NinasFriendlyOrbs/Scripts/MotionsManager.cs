@@ -17,6 +17,8 @@ public class MotionsManager : MonoBehaviour
     [SerializeField] private float trackerCurrentSpeed;
     [SerializeField] public int motionLoopCount = 3;
     private int currentMotionLoopCount;
+
+    private float t;
     
     [SerializeField] public List<Package<Vector3>> motions;
 
@@ -48,7 +50,8 @@ public class MotionsManager : MonoBehaviour
        
         // Start
         Debug.Log("== START GAME ==");
-        
+
+        t = 0f;
         UpdateMotionAudioClip();
         
         motionStateManager.GetTrackingLeft().SetMotionSpeed(trackerDefaultSpeed);
@@ -69,7 +72,8 @@ public class MotionsManager : MonoBehaviour
        
         // Start
         Debug.Log("== SWITCHING MOTION TO INDEX: "+currentMotion+" ==");
-        
+
+        t = 0f;
         UpdateMotionAudioClip();
         
         motionStateManager.GetTrackingLeft().SetMotionSpeed(trackerDefaultSpeed);
@@ -124,8 +128,17 @@ public class MotionsManager : MonoBehaviour
     public void PrintDurationOfCurrentMotion()
     {
         //This is for audio recording purposes
-        //t = d/v
-        //Debug.Log("Current motion: "+currentMotion+" | Duration: "+(1f/trackerDefaultSpeed));
-        Debug.Log(motionStateManager.GetTrackingLeft().GetComponent<SplineComputer>().CalculateLength());
+        t += Time.deltaTime;
+        Debug.Log("Current motion"+currentMotion+" | Time: "+t);
+        
+        // -- Current values --
+        //Intro = 3s
+        //Motion A = 10.1s
+        //Motion B = (3s countdown transition) + 8.07s
+    }
+
+    private void Update()
+    {
+        //PrintDurationOfCurrentMotion();
     }
 }
